@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 """
-Save as file daily_tp.py and run "python daily_tp.py".
-
 Input file : tp_20170101-20170102.nc
 Output file: daily-tp_20170101.nc
 """

@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 """
-Save as get-tp.py, then run "python get-tp.py".
-  
 Input file : None
 Output file: tp_20170101-20170102.nc
 """
