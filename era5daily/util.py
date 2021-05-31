@@ -30,7 +30,7 @@ def fix_units(name_file):
     '''
     f_in = f'{name_file}_missingvalues.nc'
     f_out_changeunits = f'{name_file}_changeunits.nc'
-    f_out_changenames = f'{name_file}.nc'
+    f_out_changenames = f'{name_file}_newnames.nc'
     os.system(f"cdo -expr,'pre=pre*1000;tavg=tavg-273.16;tmin=tmin-273.16;tmax=tmax-273.16;ssrd=ssrd' {f_in} {f_out_changeunits}")
     os.system(f'cdo -setattribute,pre@units="mm/day",ssrd@units="W m-2",tmin@units="C",tmax@units="C",tavg@units="C" {f_out_changeunits} {f_out_changenames}')
 
@@ -55,4 +55,5 @@ def fix_download(issue_date):
     change_namevars(name_file)
     set_missing_value(name_file)
     fix_units(name_file)
+    fix_latlon(name_file)
     delete_tempfiles()
