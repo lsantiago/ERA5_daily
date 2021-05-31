@@ -35,6 +35,8 @@ def request_precipitation(date):
             'year': year,
             'month': month,
             'day': day,
+            "area": "-3.5/-81.5/-5.5/-79",
+            'grid': "0.25/0.25",
             'time': [
                 '00:00', '01:00', '02:00',
                 '03:00', '04:00', '05:00',
